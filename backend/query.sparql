@@ -1,0 +1,13 @@
+PREFIX : <http://example.org/resource/>
+SELECT ?transfer ?blockNumber ?timestamp ?tx ?from ?to ?amount ?contractAddress
+WHERE {
+    ?transfer rdf:type :Transfer ;
+              :blockNumber ?blockNumber ;
+              :timestamp ?timestamp ;
+              :transaction ?tx ;
+              :from ?from ;
+              :to ?to ;
+              :amount ?amount ;
+              :contractAddress ?contractAddress .
+}
+LIMIT 10

@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/resource/"
+     xml:base="http://example.org/resource/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://example.org/resource/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/resource/hot_change_log#ref-block_height -->
+
+
+    <owl:ObjectProperty rdf:about="http://example.org/resource/hot_change_log#ref-block_height"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/resource/hot_block#hash -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/hot_block#hash"/>
+    
+
+
+    <!-- http://example.org/resource/hot_block#height -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/hot_block#height"/>
+    
+
+
+    <!-- http://example.org/resource/hot_change_log#block_height -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/hot_change_log#block_height"/>
+    
+
+
+    <!-- http://example.org/resource/hot_change_log#change -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/hot_change_log#change"/>
+    
+
+
+    <!-- http://example.org/resource/hot_change_log#index -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/hot_change_log#index"/>
+    
+
+
+    <!-- http://example.org/resource/migrations#id -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/migrations#id"/>
+    
+
+
+    <!-- http://example.org/resource/migrations#name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/migrations#name"/>
+    
+
+
+    <!-- http://example.org/resource/migrations#timestamp -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/migrations#timestamp"/>
+    
+
+
+    <!-- http://example.org/resource/status#hash -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/status#hash"/>
+    
+
+
+    <!-- http://example.org/resource/status#height -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/status#height"/>
+    
+
+
+    <!-- http://example.org/resource/status#id -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/status#id"/>
+    
+
+
+    <!-- http://example.org/resource/status#nonce -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/status#nonce"/>
+    
+
+
+    <!-- http://example.org/resource/transfer#amount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/transfer#amount"/>
+    
+
+
+    <!-- http://example.org/resource/transfer#block_number -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/transfer#block_number"/>
+    
+
+
+    <!-- http://example.org/resource/transfer#contract_address -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/transfer#contract_address"/>
+    
+
+
+    <!-- http://example.org/resource/transfer#from -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/transfer#from"/>
+    
+
+
+    <!-- http://example.org/resource/transfer#id -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/transfer#id"/>
+    
+
+
+    <!-- http://example.org/resource/transfer#timestamp -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/transfer#timestamp"/>
+    
+
+
+    <!-- http://example.org/resource/transfer#to -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/transfer#to"/>
+    
+
+
+    <!-- http://example.org/resource/transfer#tx -->
+
+
+    <owl:DatatypeProperty rdf:about="http://example.org/resource/transfer#tx"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.org/resource/hot_block -->
+
+
+    <owl:Class rdf:about="http://example.org/resource/hot_block"/>
+    
+
+
+    <!-- http://example.org/resource/hot_change_log -->
+
+
+    <owl:Class rdf:about="http://example.org/resource/hot_change_log"/>
+    
+
+
+    <!-- http://example.org/resource/migrations -->
+
+
+    <owl:Class rdf:about="http://example.org/resource/migrations"/>
+    
+
+
+    <!-- http://example.org/resource/status -->
+
+
+    <owl:Class rdf:about="http://example.org/resource/status"/>
+    
+
+
+    <!-- http://example.org/resource/transfer -->
+
+
+    <owl:Class rdf:about="http://example.org/resource/transfer"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.1) https://github.com/owlcs/owlapi/ -->
+
+
