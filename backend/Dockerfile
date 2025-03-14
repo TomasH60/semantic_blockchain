@@ -14,8 +14,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN wget https://github.com/ontop/ontop/releases/download/ontop-5.3.0/ontop-cli-5.3.0.zip \
     && unzip ontop-cli-5.3.0.zip -d ontop-cli \
     && rm ontop-cli-5.3.0.zip \
-    && chmod +x ontop-cli/ontop
+    && chmod +x ontop-cli/ontop.bat \
+    && wget https://jdbc.postgresql.org/download/postgresql-42.7.5.jar \
+    && mv postgresql-42.7.5.jar ontop-cli/jdbc/ \
+    && apt update \
+    && apt install bash-completion \
+    && apt install -y default-jdk
 
-# Start the Ontop endpoint and then run FastAPI with Uvicorn
-CMD ["/bin/sh"]
-#, "./ontop-cli/ontop endpoint --ontology=schema.owl --mapping=mapping.obda --properties=ontop.properties & uvicorn main:app --host 0.0.0.0 --port 8000"
+
+CMD ["bash", "-c", "ontop-cli/ontop endpoint --ontology=ontology.owl --mapping=mapping.obda --properties=ontop.properties & uvicorn main:app --host 0.0.0.0 --port 8000"]
+

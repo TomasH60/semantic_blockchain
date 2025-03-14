@@ -52,8 +52,9 @@ services:
     restart: unless-stopped  # Avoids infinite restarts
     stdin_open: true  # Keeps the container interactive
     tty: true  # Keeps the shell open
-    command: ["/bin/sh"]  # Ensures it runs a shell
-
+    ports:
+       - "8000:8000"
+       - "8080:8080"
 
   frontend:
     build: ./frontend
