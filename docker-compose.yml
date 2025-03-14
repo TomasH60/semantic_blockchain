@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "22135:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  indexer:
+    build: ./indexer
+    container_name: indexer
+    restart: always
+    working_dir: /app
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASS: postgres
+    volumes:
+      - ./indexer:/app
+    command: >
+      sh -c "npx squid-typeorm-migration apply && node -r dotenv/config lib/main.js"
+    ports:
+      - "5000:5000"
+
+
+ 
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: unless-stopped  # Avoids infinite restarts
+    stdin_open: true  # Keeps the container interactive
+    tty: true  # Keeps the shell open
+    command: ["/bin/sh"]  # Ensures it runs a shell
+
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
+
+volumes:
+  pgdata:
