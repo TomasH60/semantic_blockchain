@@ -1,0 +1,232 @@
+:root {
+  --primary-color: #3498db;
+  --primary-dark: #2980b9;
+  --accent-color: #8e44ad;
+  --accent-dark: #732d91;
+  --success-color: #27ae60;
+  --success-dark: #219150;
+  --background: #f5f7fa;
+  --text-color: #333;
+  --surface: #ffffff;
+  --surface-alt: #ecf0f1;
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--text-color);
+
+}
+
+.App {
+  padding: 2rem;
+}
+
+h1,
+h2 {
+  color: #2c3e50;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.logo {
+  height: 42px;
+  width: 42px;
+  filter: invert(1);
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(144, 199, 255);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  height: 50px;
+  box-shadow: var(--shadow);
+}
+
+
+.navbar button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.navbar button:hover {
+  background-color: var(--primary-dark);
+}
+
+
+
+/* Shared Button Styling */
+button {
+  margin: 0.2rem 0.2rem 0 0;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s ease;
+  font-family: "Roboto Mono", monospace;
+  background-color: var(--accent-color);
+}
+
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Specific Button Color Contexts */
+.controls button {
+  
+  background-color: var(--accent-color);
+}
+
+.controls button:hover:not(:disabled) {
+  background-color: var(--accent-color);
+}
+
+.query-window button,
+.editor-window button {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.query-window button:hover,
+.editor-window button:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Input Field */
+.controls input {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.4rem;
+  width: 60px;
+}
+
+/* Benchmark Table */
+.benchmark table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.benchmark th,
+.benchmark td {
+  padding: 0.6rem;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.benchmark th {
+  background-color: var(--surface-alt);
+}
+
+/* Reusable Section Styling */
+.data,
+.query-window,
+.editor-window {
+  margin-top: 2rem;
+  background-color: var(--surface);
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+ 
+}
+.split-window {
+  display: flex;
+  gap: 1rem;
+  height: calc(100vh - 200px);
+  background-color: var(--surface);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.split-pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-pane {
+  padding-right: 1rem;
+  border-right: 2px solid #ddd;
+}
+
+.right-pane {
+  padding-left: 1rem;
+  overflow-x: auto;
+}
+
+.split-pane h2 {
+  margin-top: 0;
+}
+
+.split-pane pre {
+  flex-grow: 1;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 1rem;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-family: "Roboto Mono", monospace;
+}
+
+.notification.success {
+  background-color: #27ae60;
+  color: white;
+}
+
+.notification.error {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.notification .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}

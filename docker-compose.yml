@@ -1,4 +1,4 @@
-version: '3.8'
+
 
 services:
   db:
@@ -61,11 +61,18 @@ services:
     container_name: frontend
     restart: always
     depends_on:
-      - backend
+      backend:
+        condition: service_started
     ports:
       - "3000:3000"
+    volumes:
+      - ./frontend:/app  # Enables live hot reloading for React
+      - /app/node_modules  # Prevents overwriting node_modules
     stdin_open: true
     tty: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true  # Ensures file changes trigger reload in React
+    command: ["npm", "start"]  # Runs React in development mode
 
 volumes:
   pgdata:

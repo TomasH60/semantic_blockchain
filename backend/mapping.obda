@@ -1,33 +1,18 @@
 [PrefixDeclaration]
-rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
-rdfs:		http://www.w3.org/2000/01/rdf-schema#
-owl:		http://www.w3.org/2002/07/owl#
-xsd:		http://www.w3.org/2001/XMLSchema#
-obda:		https://w3id.org/obda/vocabulary#
+rdf:        http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdfs:       http://www.w3.org/2000/01/rdf-schema#
+owl:        http://www.w3.org/2002/07/owl#
+xsd:        http://www.w3.org/2001/XMLSchema#
+blon:       http://www.semanticblockchain.com/Blondie.owl#
 
 [MappingDeclaration] @collection [[
-mappingId	MAPPING-ID1
-target		<http://example.org/resource/transfer/id={id}> a <http://example.org/resource/transfer> ; <http://example.org/resource/transfer#id> {id}^^xsd:string ; <http://example.org/resource/transfer#block_number> {block_number}^^xsd:integer ; <http://example.org/resource/transfer#timestamp> {timestamp}^^xsd:dateTime ; <http://example.org/resource/transfer#tx> {tx}^^xsd:string ; <http://example.org/resource/transfer#from> {from}^^xsd:string ; <http://example.org/resource/transfer#to> {to}^^xsd:string ; <http://example.org/resource/transfer#amount> {amount}^^xsd:decimal ; <http://example.org/resource/transfer#contract_address> {contract_address}^^xsd:string . 
-source		SELECT * FROM "transfer"
-
-mappingId	MAPPING-ID2
-target		<http://example.org/resource/migrations/id={id}> a <http://example.org/resource/migrations> ; <http://example.org/resource/migrations#id> {id}^^xsd:integer ; <http://example.org/resource/migrations#timestamp> {timestamp}^^xsd:integer ; <http://example.org/resource/migrations#name> {name}^^xsd:string . 
-source		SELECT * FROM "migrations"
-
-mappingId	MAPPING-ID3
-target		<http://example.org/resource/hot_block/height={height}> a <http://example.org/resource/hot_block> ; <http://example.org/resource/hot_block#height> {height}^^xsd:integer ; <http://example.org/resource/hot_block#hash> {hash}^^xsd:string . 
-source		SELECT * FROM "squid_processor"."hot_block"
-
-mappingId	MAPPING-ID4
-target		<http://example.org/resource/hot_change_log/block_height={block_height};index={index}> a <http://example.org/resource/hot_change_log> ; <http://example.org/resource/hot_change_log#block_height> {block_height}^^xsd:integer ; <http://example.org/resource/hot_change_log#index> {index}^^xsd:integer ; <http://example.org/resource/hot_change_log#change> {change}^^xsd:string . 
-source		SELECT * FROM "squid_processor"."hot_change_log"
-
-mappingId	MAPPING-ID5
-target		<http://example.org/resource/hot_change_log/block_height={hot_change_log_block_height};index={hot_change_log_index}> <http://example.org/resource/hot_change_log#ref-block_height> <http://example.org/resource/hot_block/height={hot_block_height}> . 
-source		SELECT "squid_processor"."hot_change_log"."block_height" AS "hot_change_log_block_height", "squid_processor"."hot_change_log"."index" AS "hot_change_log_index", "squid_processor"."hot_block"."height" AS "hot_block_height" FROM "squid_processor"."hot_change_log", "squid_processor"."hot_block" WHERE "squid_processor"."hot_change_log"."block_height" = "squid_processor"."hot_block"."height"
-
-mappingId	MAPPING-ID6
-target		<http://example.org/resource/status/id={id}> a <http://example.org/resource/status> ; <http://example.org/resource/status#id> {id}^^xsd:integer ; <http://example.org/resource/status#height> {height}^^xsd:integer ; <http://example.org/resource/status#hash> {hash}^^xsd:string ; <http://example.org/resource/status#nonce> {nonce}^^xsd:integer . 
-source		SELECT * FROM "squid_processor"."status"
+mappingId	MAPPING-TRON-TRANSFER
+target		<http://www.semanticblockchain.com/resource/TronTx_{id}> a blon:TronTransaction ; blon:txIdTronTransaction {id}^^xsd:string ; blon:senderTronTransaction {from}^^xsd:string ; blon:recipientTronTransaction {to}^^xsd:string ; blon:contractAddressTronTransaction {contract_address}^^xsd:string ; blon:valueTronTransaction {amount}^^xsd:decimal ; blon:timestampTronTransaction {timestamp}^^xsd:string ; blon:blockNumberTronTransaction {block_number}^^xsd:integer . 
+source		SELECT id, MAX("from") AS "from", MAX("to") AS "to", MAX(contract_address) AS contract_address, MAX(amount) AS amount, MAX(timestamp) AS timestamp, MAX(block_number) AS block_number FROM transfer GROUP BY id LIMIT 10
 ]]
 
+[MappingDeclaration] @collection [[
+mappingId	MAPPING-TRON-CONTRACT-EXEC
+target		<http://www.semanticblockchain.com/resource/ContractExec_{id}> a blon:TronContractExecution ; blon:txIdTronTransaction {tx}^^xsd:string ; blon:contractAddressTronTransaction {contract_address}^^xsd:string ; blon:timestampTronTransaction {timestamp}^^xsd:string ; blon:blockNumberTronTransaction {block_number}^^xsd:integer ; blon:callerTronContractExecution {caller}^^xsd:string ; blon:methodIdTronContractExecution {method_id}^^xsd:string . 
+source		SELECT id, tx, contract_address, timestamp, block_number, caller, method_id FROM contract_execution LIMIT 10
+]]

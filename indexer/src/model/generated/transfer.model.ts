@@ -28,7 +28,6 @@ export class Transfer {
     @Column_("numeric", {transformer: marshal.bigintTransformer, nullable: false})
     amount!: bigint
 
-    // Add the new contractAddress column
     @Column_("text", {nullable: false})
     contractAddress!: string
 }
