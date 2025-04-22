@@ -2,3 +2,6 @@ fastapi
 uvicorn
 SPARQLWrapper
 psycopg2
+owlready2
+python-dotenv
+python-multipart

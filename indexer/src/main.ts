@@ -35,7 +35,6 @@ processor.run(new TypeormDatabase(), async (ctx) => {
         try {
           assert(log.data, "Transfers always carry data");
         } catch (error) {
-          console.log(error);
           continue;
         }
 
@@ -58,12 +57,9 @@ processor.run(new TypeormDatabase(), async (ctx) => {
               contractAddress: log.address,
             })
           );
-        } else {
-          console.warn("Unexpected topic count:", log.topics);
-        }
+        } 
       }
 
-      // Index all contract executions
       executions.push(
         new ContractExecution({
           id: log.id + "-exec",

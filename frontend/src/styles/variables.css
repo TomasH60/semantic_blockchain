@@ -1,0 +1,22 @@
+:root {
+    --primary-color: #3498db;
+    --primary-dark: #2980b9;
+    --accent-color: #8e44ad;
+    --accent-dark: #732d91;
+    --success-color: #27ae60;
+    --success-dark: #219150;
+    --background:rgb(255, 255, 255);
+    --text-color: #333;
+    --surface: #ffffff;
+    --surface-alt: #ecf0f1;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.32);
+  }
+  
+  body {
+    font-family: "Nunito", monospace;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text-color);
+  }
+  

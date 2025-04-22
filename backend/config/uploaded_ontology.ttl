@@ -1,0 +1,197 @@
+<http://www.semanticblockchain.com/resource/TronTx_0003112826-3c4d2-000001-000000> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003122652-1a8bb-000003-000000> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003126293-24639-000016-000000> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003129821-e4ad3-000000-000000> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003129830-1a3d2-000001-000000> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133479-5a3d6-000004-000000> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133495-d16c2-000009-000000> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133880-ebdfc-000015-000000> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003135482-53f82-000009-000000> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003157544-468e3-000001-000000> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005297503-289b8-000072-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005297502-7921a-000050-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005297503-289b8-000007-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005297502-7921a-000010-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005297503-289b8-000018-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005297503-289b8-000065-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005297502-7921a-000018-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005297502-7921a-000033-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005297503-289b8-000069-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005297503-289b8-000057-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronTransaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003157544-468e3-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "3157544"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/TronTx_0003122652-1a8bb-000003-000000> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "3122652"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/TronTx_0003112826-3c4d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "3112826"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005300671-fb22d-000015-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "5300671"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/TronTx_0003126293-24639-000016-000000> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "3126293"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005300671-fb22d-000088-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "5300671"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005300671-fb22d-000035-000001-exec> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "5300671"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005300671-fb22d-000036-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "5300671"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005300671-fb22d-000000-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "5300671"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005300672-ef2c6-000055-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "5300672"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133495-d16c2-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "3133495"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005300670-3ff39-000038-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "5300670"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005300672-ef2c6-000047-000001-exec> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "5300672"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005300672-ef2c6-000029-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "5300672"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133479-5a3d6-000004-000000> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "3133479"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/TronTx_0003135482-53f82-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "3135482"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005300672-ef2c6-000021-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "5300672"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133880-ebdfc-000015-000000> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "3133880"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/TronTx_0003129830-1a3d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "3129830"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/TronTx_0003129821-e4ad3-000000-000000> <http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction> "3129821"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302272-27d2b-000027-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-12-28 02:17:42+01" .
+<http://www.semanticblockchain.com/resource/TronTx_0003135482-53f82-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-10-12 15:42:09+02" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302271-c8815-000052-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-12-28 02:17:39+01" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302271-c8815-000029-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-12-28 02:17:39+01" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302271-c8815-000036-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-12-28 02:17:39+01" .
+<http://www.semanticblockchain.com/resource/TronTx_0003122652-1a8bb-000003-000000> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-10-12 04:59:45+02" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133479-5a3d6-000004-000000> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-10-12 14:02:00+02" .
+<http://www.semanticblockchain.com/resource/TronTx_0003126293-24639-000016-000000> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-10-12 08:01:54+02" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302270-68eb1-000018-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-12-28 02:17:36+01" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302272-27d2b-000021-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-12-28 02:17:42+01" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133495-d16c2-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-10-12 14:02:48+02" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302273-d1c89-000018-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-12-28 02:17:45+01" .
+<http://www.semanticblockchain.com/resource/TronTx_0003112826-3c4d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-10-11 20:33:30+02" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129821-e4ad3-000000-000000> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-10-12 10:58:18+02" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302269-11e2f-000050-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-12-28 02:17:33+01" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129830-1a3d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-10-12 10:58:45+02" .
+<http://www.semanticblockchain.com/resource/TronTx_0003157544-468e3-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-10-13 10:09:54+02" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302272-27d2b-000018-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-12-28 02:17:42+01" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302272-27d2b-000014-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-12-28 02:17:42+01" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133880-ebdfc-000015-000000> <http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction> "2018-10-12 14:22:03+02" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302810-3f0d4-000051-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution> "00000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302814-e97a9-000039-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution> "00000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302812-062e7-000066-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution> "00000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302813-9611d-000024-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution> "00000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302814-e97a9-000068-000001-exec> <http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution> "00000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302811-5a471-000016-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution> "00000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302812-062e7-000036-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution> "00000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302811-5a471-000033-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution> "00000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302812-062e7-000095-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution> "00000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005302813-9611d-000050-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution> "00000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005304096-24a24-000034-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronContractExecution> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005304096-24a24-000062-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronContractExecution> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005304096-24a24-000053-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronContractExecution> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005304096-24a24-000028-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronContractExecution> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005304096-24a24-000064-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronContractExecution> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005304096-24a24-000033-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronContractExecution> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005304096-24a24-000019-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronContractExecution> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005304096-24a24-000012-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronContractExecution> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005304096-24a24-000005-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronContractExecution> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005304096-24a24-000063-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#TronContractExecution> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005305720-07aeb-000040-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#callerTronContractExecution> "0xa5ae9c370df734211d9059fdfa3f2044f9054c91" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005305720-07aeb-000070-000001-exec> <http://www.semanticblockchain.com/Blondie.owl#callerTronContractExecution> "0xb5d6de8ad112b5b5c36f56d7c92087b35178a065" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005305720-07aeb-000038-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#callerTronContractExecution> "0xa5ae9c370df734211d9059fdfa3f2044f9054c91" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005305720-07aeb-000037-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#callerTronContractExecution> "0x233ebffcea31a0908648d6b2b0d1ea708647dcc4" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005305720-07aeb-000028-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#callerTronContractExecution> "0xa5ae9c370df734211d9059fdfa3f2044f9054c91" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005305720-07aeb-000041-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#callerTronContractExecution> "0xa5ae9c370df734211d9059fdfa3f2044f9054c91" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005305720-07aeb-000000-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#callerTronContractExecution> "0x233ebffcea31a0908648d6b2b0d1ea708647dcc4" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005305720-07aeb-000043-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#callerTronContractExecution> "0x233ebffcea31a0908648d6b2b0d1ea708647dcc4" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005305720-07aeb-000025-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#callerTronContractExecution> "0x233ebffcea31a0908648d6b2b0d1ea708647dcc4" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005305720-07aeb-000032-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#callerTronContractExecution> "0x233ebffcea31a0908648d6b2b0d1ea708647dcc4" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005308378-0643d-000068-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "11c0b905bcd5a73980f10da6872446a5f508214611a13211363e558f43123fdf" .
+<http://www.semanticblockchain.com/resource/TronTx_0003135482-53f82-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "0003135482-53f82-000009-000000" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133495-d16c2-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "0003133495-d16c2-000009-000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005308379-0c32b-000003-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "87aa4fe7fd00f757244dfe387603e0f0ce0b1c3685d87d80015f1a051e3dc39a" .
+<http://www.semanticblockchain.com/resource/TronTx_0003112826-3c4d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "0003112826-3c4d2-000001-000000" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129821-e4ad3-000000-000000> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "0003129821-e4ad3-000000-000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005308379-0c32b-000023-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "49b2cd056faf0f2db9e95b205691a7db5b6496ce63188a09423ea600ec9d0c2f" .
+<http://www.semanticblockchain.com/resource/TronTx_0003126293-24639-000016-000000> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "0003126293-24639-000016-000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005308379-0c32b-000004-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "7cbc489c7a9d2cdf12a88a3a8c825a27d2525c5123d3ed1e9991c38e3bcf7a4b" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005308378-0643d-000067-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "89264792dcb4d9550d6053b59e9dba4111e9db5317641b7b2cbc3dddf02a8ae8" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005308378-0643d-000047-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "989221cfe36a21c03f8061ff9877070808d67da40206e902457c71a4e21505ed" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133880-ebdfc-000015-000000> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "0003133880-ebdfc-000015-000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005308379-0c32b-000016-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "b3c13f80eef53a44db438fc055f3962fc22d2436cf3da009c0d3abfe14f41119" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005308379-0c32b-000013-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "c57e3ab346ef2903ffca68f55d4d1e17f1474fb20e18e66d0ce48b2a10901175" .
+<http://www.semanticblockchain.com/resource/TronTx_0003122652-1a8bb-000003-000000> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "0003122652-1a8bb-000003-000000" .
+<http://www.semanticblockchain.com/resource/TronTx_0003157544-468e3-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "0003157544-468e3-000001-000000" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133479-5a3d6-000004-000000> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "0003133479-5a3d6-000004-000000" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129830-1a3d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "0003129830-1a3d2-000001-000000" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005308378-0643d-000046-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "b4aaac278d7cd00273a011da14b43fded124acc6d619820a9bfcdc53d20227df" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005308379-0c32b-000002-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction> "c439eddb2f56855510a921082759b6c09f135eb2fab58e5407dc4602f11040d7" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129830-1a3d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction> "100000000000000"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133880-ebdfc-000015-000000> <http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction> "23881000"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133495-d16c2-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction> "17978999"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticblockchain.com/resource/TronTx_0003157544-468e3-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction> "54689000"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticblockchain.com/resource/TronTx_0003122652-1a8bb-000003-000000> <http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction> "100000000000000000"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticblockchain.com/resource/TronTx_0003112826-3c4d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction> "100000000000000000"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133479-5a3d6-000004-000000> <http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction> "34965999"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticblockchain.com/resource/TronTx_0003129821-e4ad3-000000-000000> <http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction> "100000000000000"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticblockchain.com/resource/TronTx_0003135482-53f82-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction> "1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticblockchain.com/resource/TronTx_0003126293-24639-000016-000000> <http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction> "100000000000000"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133495-d16c2-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction> "0x32216e638745eaeebcdb9505541e9db0a5e00c02" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133479-5a3d6-000004-000000> <http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction> "0x32216e638745eaeebcdb9505541e9db0a5e00c02" .
+<http://www.semanticblockchain.com/resource/TronTx_0003122652-1a8bb-000003-000000> <http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction> "0x0000000000000000000000000000000000000000" .
+<http://www.semanticblockchain.com/resource/TronTx_0003126293-24639-000016-000000> <http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction> "0x0182b06ba5e503d4fed86793356c148efd08b376" .
+<http://www.semanticblockchain.com/resource/TronTx_0003112826-3c4d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction> "0x0000000000000000000000000000000000000000" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129830-1a3d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction> "0x0182b06ba5e503d4fed86793356c148efd08b376" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129821-e4ad3-000000-000000> <http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction> "0xb6f779fbf628fe77419fc66ae7a95588b4ee21e9" .
+<http://www.semanticblockchain.com/resource/TronTx_0003135482-53f82-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction> "0x91d5171984e7d3a6db34268d9023cde9f661a077" .
+<http://www.semanticblockchain.com/resource/TronTx_0003157544-468e3-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction> "0x32216e638745eaeebcdb9505541e9db0a5e00c02" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133880-ebdfc-000015-000000> <http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction> "0x32216e638745eaeebcdb9505541e9db0a5e00c02" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133479-5a3d6-000004-000000> <http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction> "0x1c12276d62bef37c3a82ce72c3d32e3b512e7ff1" .
+<http://www.semanticblockchain.com/resource/TronTx_0003126293-24639-000016-000000> <http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction> "0xb6f779fbf628fe77419fc66ae7a95588b4ee21e9" .
+<http://www.semanticblockchain.com/resource/TronTx_0003122652-1a8bb-000003-000000> <http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction> "0x20b4f23850f19a9a7c8de21acb7a68bdce189208" .
+<http://www.semanticblockchain.com/resource/TronTx_0003112826-3c4d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction> "0x0000000000000000000000000000000000000000" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133495-d16c2-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction> "0x5d7116af010bf6f4647d13a6dc2ebbca1173f86e" .
+<http://www.semanticblockchain.com/resource/TronTx_0003135482-53f82-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction> "0x7e4280ae30612084c2a1ea56743f5956921291ec" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129830-1a3d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction> "0x32216e638745eaeebcdb9505541e9db0a5e00c02" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129821-e4ad3-000000-000000> <http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction> "0x0182b06ba5e503d4fed86793356c148efd08b376" .
+<http://www.semanticblockchain.com/resource/TronTx_0003157544-468e3-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction> "0x1c12276d62bef37c3a82ce72c3d32e3b512e7ff1" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133880-ebdfc-000015-000000> <http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction> "0x5d7116af010bf6f4647d13a6dc2ebbca1173f86e" .
+<http://www.semanticblockchain.com/Blondie.owl#nonceEthereumAccount> <http://www.w3.org/2000/01/rdf-schema#comment> "A scalar value equal to the number of transactions sent from this address or, in the case of accounts with associated code, the number of contract-creations made by this account." .
+<http://www.semanticblockchain.com/Blondie.owl#Blockheader> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://www.semanticblockchain.com/Blondie.owl#nonceEthereumTransaction> <http://www.w3.org/2000/01/rdf-schema#comment> "A scalar value equal to the number of transactions sent by the sender." .
+<http://www.semanticblockchain.com/Blondie.owl#codeHashContractEthereumAccount> <http://www.w3.org/2000/01/rdf-schema#comment> "The hash of the EVM code of this account this is the code that gets executed should this address receive a message call; it is immutable and thus, unlike all other fields, cannot be changed after construction. All such code fragments are contained in the state database under their corresponding hashes for later retrieval." .
+<http://www.semanticblockchain.com/Blondie.owl#gasLimitEthereumTransaction> <http://www.w3.org/2000/01/rdf-schema#comment> "A scalar value equal to the maximum amount of gas that should be used in executing this transaction. This is paid up-front, before any computation is done and may not be increased later." .
+<http://www.semanticblockchain.com/Blondie.owl#valueEthereumTransaction> <http://www.w3.org/2000/01/rdf-schema#comment> "A scalar value equal to the number of Wei to be transferred to the message call's recipient or, in the case of contract creation, as an endowment to the newly created account" .
+<http://www.semanticblockchain.com/Blondie.owl#balanceEthereumAccount> <http://www.w3.org/2000/01/rdf-schema#comment> "A scalar value equal to the number of Wei owned by this address." .
+<http://www.semanticblockchain.com/Blondie.owl#gasPriceEthereumTransaction> <http://www.w3.org/2000/01/rdf-schema#comment> "A scalar value equal to the number of Wei to be paid per unit of gas for all computation costs incurred as a result of the execution of this transaction." .
+<http://www.semanticblockchain.com/Blondie.owl#EthereumBlock> <http://www.w3.org/2000/01/rdf-schema#comment> "Ethereum block" .
+<http://www.semanticblockchain.com/Blondie.owl#BitcoinTransactionOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Bitcoin output transaction" .
+<http://www.semanticblockchain.com/Blondie.owl#BitcoinBlock> <http://www.w3.org/2000/01/rdf-schema#comment> "Bitcoin block." .
+<http://www.semanticblockchain.com/Blondie.owl#BitcoinBlockheader> <http://www.w3.org/2000/01/rdf-schema#comment> "An 80-byte header belonging to a single block which is hashed repeatedly to create proof of work." .
+<http://www.semanticblockchain.com/Blondie.owl#BitcoinTransactionInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Bitcoin input transaction" .
+<http://www.semanticblockchain.com/Blondie.owl#Block> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of transactions with the same timestamp." .
+<http://www.semanticblockchain.com/Blondie.owl#storageRootContractEthereumAccount> <http://www.w3.org/2000/01/rdf-schema#comment> """A 256-bit hash of the root node of a Merkle Patricia tree that encodes the storage contents
+of the account (a mapping between 256-bit integer values), encoded into the trie as a mapping
+from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values.""" .
+<http://www.semanticblockchain.com/resource/TronTx_0003112826-3c4d2-000001-000000> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003122652-1a8bb-000003-000000> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003126293-24639-000016-000000> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003129821-e4ad3-000000-000000> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003129830-1a3d2-000001-000000> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133479-5a3d6-000004-000000> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133495-d16c2-000009-000000> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003133880-ebdfc-000015-000000> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003135482-53f82-000009-000000> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/TronTx_0003157544-468e3-000001-000000> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005317369-028b7-000077-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005317369-028b7-000053-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005317369-028b7-000046-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005317369-028b7-000086-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005317369-028b7-000075-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005317369-028b7-000027-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005317369-028b7-000026-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005317369-028b7-000077-000001-exec> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005317369-028b7-000087-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005317370-409a9-000078-000000-exec> a <http://www.semanticblockchain.com/Blondie.owl#Transaction> .
+<http://www.semanticblockchain.com/resource/ContractExec_0005320256-76856-000067-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "574138562ca8bd1d35068c5b21279610c1f583c4" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133880-ebdfc-000015-000000> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "93b715e65d2943394f5360b81fabf2a8b0363319" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005320256-76856-000046-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "574138562ca8bd1d35068c5b21279610c1f583c4" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005320255-ddb0c-000037-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "f8ade63f6294b1e3256c469c05a7e08ae6f1532c" .
+<http://www.semanticblockchain.com/resource/TronTx_0003126293-24639-000016-000000> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "93b715e65d2943394f5360b81fabf2a8b0363319" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005320256-76856-000051-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "574138562ca8bd1d35068c5b21279610c1f583c4" .
+<http://www.semanticblockchain.com/resource/TronTx_0003122652-1a8bb-000003-000000> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "5799f8624d5e5649fda962efa95650982e0ea848" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005320256-76856-000069-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "1a44e676d4864660d984f6d1f4eb06d0f5cc5208" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005320255-ddb0c-000004-000001-exec> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "11136ecf459fc132d2e63cdada8a6d252417a50f" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005320255-ddb0c-000035-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "574138562ca8bd1d35068c5b21279610c1f583c4" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133479-5a3d6-000004-000000> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "93b715e65d2943394f5360b81fabf2a8b0363319" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005320255-ddb0c-000066-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "deaa5f32963c919c2a5a8f8482cc8c92f504b8b2" .
+<http://www.semanticblockchain.com/resource/TronTx_0003135482-53f82-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "a229bcec5f905716015276bc56cdeb5f440b6fc5" .
+<http://www.semanticblockchain.com/resource/TronTx_0003112826-3c4d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "6406ffa99d75add25e459b4e6d0ba39b444033f8" .
+<http://www.semanticblockchain.com/resource/TronTx_0003133495-d16c2-000009-000000> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "93b715e65d2943394f5360b81fabf2a8b0363319" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005320255-ddb0c-000026-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "574138562ca8bd1d35068c5b21279610c1f583c4" .
+<http://www.semanticblockchain.com/resource/TronTx_0003157544-468e3-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "93b715e65d2943394f5360b81fabf2a8b0363319" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129830-1a3d2-000001-000000> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "93b715e65d2943394f5360b81fabf2a8b0363319" .
+<http://www.semanticblockchain.com/resource/TronTx_0003129821-e4ad3-000000-000000> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "93b715e65d2943394f5360b81fabf2a8b0363319" .
+<http://www.semanticblockchain.com/resource/ContractExec_0005320255-ddb0c-000024-000000-exec> <http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction> "574138562ca8bd1d35068c5b21279610c1f583c4" .

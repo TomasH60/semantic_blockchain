@@ -1,0 +1,36 @@
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 300px;
+    max-width: 400px;
+    padding: 1rem;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Roboto Mono", monospace;
+  }
+  
+  .notification.success {
+    background-color: #27ae60;
+    color: white;
+  }
+  
+  .notification.error {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .notification .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+  

@@ -1,6 +1,7 @@
 def define_custom_classes(onto):
-    with onto:
-        class HighValueTransaction(onto.TronTransaction):
-            equivalent_to = [
-                onto.TronTransaction & (onto.valueTronTransaction >= 1000000000)
-            ]
+    def define_custom_classes(onto):
+        with onto:
+            class HighValueTransaction(onto.TronTransaction):
+                equivalent_to = [
+                    onto.TronTransaction & (onto.valueTronTransaction >= 1000000000)
+                ]

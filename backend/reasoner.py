@@ -1,53 +1,52 @@
 from owlready2 import *
+from rdflib.namespace import RDF, RDFS, OWL
 import importlib.util
-import datetime
+import os
+from config import BASE_DIR, INFERRED_DUMP
 
-onto = get_ontology("file:////home/tomas/semantica/backend/ontology.owl").load()
-data = get_ontology("file:////home/tomas/semantica/backend/rdf_dump.rdf").load()
-onto.imported_ontologies.append(data)
 
-spec = importlib.util.spec_from_file_location("custom_classes", "/home/tomas/semantica/backend/custom_classes.py")
-custom_classes = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(custom_classes)
+onto_path = os.path.join(BASE_DIR, "config", "ontology.owl")
+data_path = os.path.join(BASE_DIR, "dump", "rdf_dump.rdf")
+custom_path = os.path.join(BASE_DIR, "classes", "custom_classes.py")
 
-custom_classes.define_custom_classes(onto)
+# Load ontologies
+onto = get_ontology(f"file://{onto_path}").load()
+data = get_ontology(f"file://{data_path}").load()
 
-sync_reasoner()
+# Before reasoning: snapshot the original set of triples
+original_triples = set(onto.world.as_rdflib_graph())
 
-# Collect summary
-total_classes = 0
-total_instances = 0
-classes_with_instances = 0
-inferred_output = []
+with onto:
+    # Merge RDF dump
+    for triple in data.world.as_rdflib_graph().triples((None, None, None)):
+        onto.world.as_rdflib_graph().add(triple)
 
-for cls in onto.classes():
-    instances = list(cls.instances())
-    total_classes += 1
-    if not instances:
-        continue
-    classes_with_instances += 1
-    total_instances += len(instances)
+    # Custom OWL classes
+    spec = importlib.util.spec_from_file_location("custom_classes", custom_path)
+    custom_classes = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(custom_classes)
+    custom_classes.define_custom_classes(onto)
 
-    output = [f"\nClass: {cls.name} ({len(instances)} instances)"]
-    for inst in instances:
-        output.append(f"  • Instance: {inst.name}")
-        for prop in inst.get_properties():
-            try:
-                values = getattr(inst, prop.name, [])
-                if values:
-                    output.append(f"    - {prop.name}: {values}")
-            except Exception as e:
-                output.append(f"    - {prop.name}: <error: {e}>")
-    inferred_output.append("\n".join(output))
+    # Run reasoner, inject inferred axioms into `onto`
+    sync_reasoner()
 
-# Print summary
-print("=== Reasoning Summary ===")
-print(f"Total Classes: {total_classes}")
-print(f"Classes with Inferred Instances: {classes_with_instances}")
-print(f"Total Inferred Instances: {total_instances}")
-print("=========================")
+# After reasoning: get new set of triples
+new_triples = set(onto.world.as_rdflib_graph())
+inferred_triples = new_triples - original_triples
 
-# Print details
-print("\nInferred Instances:")
-for block in inferred_output:
-    print(block)
+# Analyze inferred triples
+inferred_types = [t for t in inferred_triples if t[1] == RDF.type]
+inferred_subclasses = [t for t in inferred_triples if t[1] == RDFS.subClassOf]
+inferred_equivalents = [t for t in inferred_triples if t[1] == OWL.equivalentClass]
+
+# Print statistics
+print("=== REASONING INFERENCES ===")
+print(f"Total new inferred triples: {len(inferred_triples)}")
+print(f"Inferred rdf:type (class memberships): {len(inferred_types)}")
+print(f"Inferred rdfs:subClassOf (hierarchy): {len(inferred_subclasses)}")
+print(f"Inferred owl:equivalentClass axioms: {len(inferred_equivalents)}")
+print("=============================")
+
+# Save
+onto.save(file=INFERRED_DUMP, format="rdfxml")
+print(f"Saved combined and reasoned ontology to: {INFERRED_DUMP}")

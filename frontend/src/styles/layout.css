@@ -1,0 +1,89 @@
+
+
+.main-content {
+  flex-grow: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow: auto;
+}
+
+h1,
+h2 {
+  color: #2c3e50;
+}
+
+pre {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+.app-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+pre {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0.4rem 0.2rem;
+}
+
+.stat-item strong {
+  font-weight: 600;
+  color: #1e272e;
+}
