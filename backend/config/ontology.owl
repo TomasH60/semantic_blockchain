@@ -22,6 +22,38 @@
 
     
 
+        <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // TRON Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- TronBlock has Payload -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#hasPayloadTronBlock">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronBlock"/>
+        <rdfs:range rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Payload"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment>Associates a TRON block with its payload of transactions.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <!-- Payload has TronTransaction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#hasTronTransactionPayload">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Payload"/>
+        <rdfs:range rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+        <rdfs:comment>Links a payload to the TRON transactions it contains.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <!-- TronTransaction emits Event -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#emitsTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+        <rdfs:range rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Represents the emission of an event by a TRON transaction.</rdfs:comment>
+    </owl:ObjectProperty>
 
     <!-- http://www.semanticblockchain.com/Blondie.owl#hasBitcoinBlockheaderBlock -->
 
@@ -747,48 +779,93 @@ from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-
     <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#versionHyperledgerTransaction">
         <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#HyperlegerTransaction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-   
-   <!-- Custom TRON datatypes -->
-    </owl:DatatypeProperty>
-        <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#txIdTronTransaction">
-        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+   </owl:DatatypeProperty>
+       <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // TRON Data Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- TRON Block -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#blockHashTronBlock">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronBlock"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The hash of the TRON block.</rdfs:comment>
     </owl:DatatypeProperty>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#senderTronTransaction">
-        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#recipientTronTransaction">
-        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#contractAddressTronTransaction">
-        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#valueTronTransaction">
-        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#blockTimestampTronBlock">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronBlock"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>The timestamp of the TRON block in milliseconds since epoch.</rdfs:comment>
     </owl:DatatypeProperty>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#timestampTronTransaction">
-        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    <!-- TRON Internal Transaction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#amountInternalTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#internalTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Amount transferred in the internal transaction.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#callerInternalTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#internalTronTransaction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Caller address initiating the internal transaction.</rdfs:comment>
     </owl:DatatypeProperty>
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#blockNumberTronTransaction">
-        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#methodIdTronContractExecution">
-        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronContractExecution"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#recipientInternalTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#internalTronTransaction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Recipient address of the internal transaction.</rdfs:comment>
     </owl:DatatypeProperty>
+
+    <!-- TRON Event Properties -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#amountTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>Amount associated with the event, e.g., issued tokens, destroyed funds.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#senderTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Address of the sender involved in the event.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#recipientTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Address of the recipient involved in the event.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#ownerTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Address of the owner entity relevant for ownership transfer events.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#newOwnerTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#ownershipTransferredTronEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>New owner address after ownership transfer.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#blacklistedAddressTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#addedBlackListTronEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Address added to the blacklist.</rdfs:comment>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#removedBlacklistAddressTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#removedBlackListTronEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Address removed from the blacklist.</rdfs:comment>
+    </owl:DatatypeProperty>
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -989,14 +1066,257 @@ from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-
 
     <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#Transaction"/>
 
+    <!-- First Third of Tron Transaction Classes -->
 
-    <!-- Custom TRON transaction class -->
-    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#TronTransaction">
-        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Transaction"/>
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#accountCreateContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
     </owl:Class>
 
-    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#TronContractExecution">
-        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Transaction"/>
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#transferContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#transferAssetContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#voteAssetContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#voteWitnessContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#witnessCreateContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#assetIssueContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#witnessUpdateContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#participateAssetIssueContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#accountUpdateContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#freezeBalanceContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#unfreezeBalanceContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#withdrawBalanceContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#unfreezeAssetContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#updateAssetContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#proposalCreateContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <!-- Second Third of Tron Transaction Classes -->
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#proposalApproveContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#proposalDeleteContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#setAccountIdContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#customContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#createSmartContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#triggerSmartContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#getContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#updateSettingContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#exchangeCreateContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#exchangeInjectContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#exchangeWithdrawContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#exchangeTransactionContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#updateEnergyLimitContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#accountPermissionUpdateContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#clearAbiContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#updateBrokerageContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+        <!-- Final Third of Tron Transaction Classes -->
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#shieldedTransferContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#marketSellAssetContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#marketCancelOrderContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#freezeBalanceV2ContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#unfreezeBalanceV2ContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#withdrawExpireUnfreezeContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#delegateResourceContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#unDelegateResourceContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#cancelAllUnfreezeV2ContractTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#genericTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+    </owl:Class>
+        <!-- TRON Base Classes -->
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#TronBlock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Block"/>
+        <rdfs:comment>TRON block containing header and transactions.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#internalTronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
+        <rdfs:comment>Internal TRON transaction representing value transfers without user-level transactions.</rdfs:comment>
+    </owl:Class>
+
+
+    <!-- TRON Event Classes -->
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#destroyedBlackFundsTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted when blacklisted funds are destroyed on TRON blockchain.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#issueTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted when new tokens are issued on TRON blockchain.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#redeemTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted when tokens are redeemed or burned on TRON blockchain.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#deprecateTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted when an old smart contract is deprecated in favor of a new one.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#addedBlackListTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted when an address is added to the blacklist on TRON blockchain.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#removedBlackListTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted when an address is removed from the blacklist on TRON blockchain.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#paramsTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted for configuration parameter updates on TRON blockchain.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#pauseTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted when a contract or token is paused.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#unpauseTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted when a paused contract or token is resumed.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#ownershipTransferredTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted when ownership of a contract is transferred to another address.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#approvalTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted when a spender is approved to spend tokens on behalf of an owner.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#transferTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Event emitted for token transfers between accounts.</rdfs:comment>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#genericLogTronEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Event"/>
+        <rdfs:comment>Generic event emitted for unknown or custom events on TRON blockchain.</rdfs:comment>
     </owl:Class>
 
     <!-- 

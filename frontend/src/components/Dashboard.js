@@ -309,7 +309,7 @@ export default function Home({ setNotification }) {
 
       <div className="card" style={{ marginTop: "2rem" }}>
         <h2 style={{ marginTop: 0 }}>Indexer performance graph:</h2>
-        <Line data={chartData} />
+         <Line data={chartData} />
       </div>
     </div>
   );

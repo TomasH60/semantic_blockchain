@@ -1,8 +1,6 @@
-.env
 indexer/node_modules/
 indexer/lib/
 frontend/node_modules/
 frontend/build/
-backend/ontop.properties
 backend/db-metadata.json
 backend/__pycache__/

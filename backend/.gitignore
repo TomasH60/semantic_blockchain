@@ -1,0 +1,3 @@
+ontop-cli/
+dump/*
+!dump/.gitkeep

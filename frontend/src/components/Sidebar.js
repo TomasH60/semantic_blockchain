@@ -11,6 +11,7 @@ export default function Sidebar({ setView }) {
         <button onClick={() => setView("home")}>Dashboard</button>
         <button onClick={() => setView("query")}>SPARQL Query</button>
         <button onClick={() => setView("editor")}>Inference Editor</button>
+        <button onClick={() => setView("graph")}>Graph</button>
       </nav>
     </div>
   );

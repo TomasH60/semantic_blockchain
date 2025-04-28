@@ -87,3 +87,17 @@ pre {
   font-weight: 600;
   color: #1e272e;
 }
+
+/* index.css or component-level CSS */
+
+
+.full-height-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.graph-container {
+  flex-grow: 1;
+  overflow: hidden;
+}
