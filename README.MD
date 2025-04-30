@@ -151,3 +151,43 @@ after all the packages have been downloaded, start the web application:
 npm start
 ```
 Now the application is running at `localhost:3000`.
+
+## Examples
+Here listed are examples of the projects functionalities: 
+### Dashboard
+This page displays the indexer statistics, data composition and controls for the Ontop endpoint, Subsquid indexer and exporting options:
+
+![enter image description here](https://i.postimg.cc/qRdHpqf7/Screenshot-2025-04-30-at-23-39-50.png)
+- The user has the option of running the Ontop SPARQL endpoint either from the database based on a .obda mapping, located in `semantic_blockchain/backend/config/mapping.obda` or from a .rdf dump, which can be upladed to the web.
+- Then, there are the options for exporting the database to the selected fromat based on the mapping discussed previously.
+- Next are the indexer controls for starting or stopping the indexer. The block range that the user wants to indexed is defined as environment variables in `semantic_blockchain/indexer/.env`.  Setting the `END_BLOCK_NUMBER` variable to `-1` will index data until the latest block and continue indexing the blocks in real time. Setting the variable `START_BLOCK_NUMBER` to `-1` will index blocks from the genesis block.
+- After starting the indexer, statistics will get displayed:
+![enter image description here](https://i.postimg.cc/LsX5PgPC/obr-zok.png)
+- the displayed  statistics represent the current data stored in the database, the block range indexed, the numbers of blocks, internal transactions, transactions and events indexed and the rates at which each item gets indexed. Under the statistics are displayed numbers of each transaction type and event type indexed.
+- Bellow is a live indexer performance graph:
+![enter image description here](https://i.postimg.cc/TYH59XjY/obr-zok.png)
+- Under the graph are displayed pie charts of transaction and event composition indexed by transaction and event types:
+![enter image description here](https://i.postimg.cc/qRTdHzrB/obr-zok.png)
+### SPARQL Query
+
+This page enables the user to write and execute SPARQL queries against the Ontop endpoint:
+
+![enter image description here](https://i.postimg.cc/X7pN8B7t/obr-zok.png)
+### Inference Editor
+This page enables the user to write custom classes defined in the OWL 2R standard, and run a Hermit reasoner against the uploaded data and ontology, located at `semantic_blockchain/backend/config/ontology.owl`. The output gets automatically downloaded to the browser.
+
+![enter image description here](https://i.postimg.cc/pLQ1gks7/obr-zok.png)
+
+### Graph
+
+This page enables the user to upload a database dump in the `.ttl` format and explore the data using different modes.
+
+![enter image description here](https://i.postimg.cc/Hnq84w54/obr-zok.png)
+
+- The current image is a visual representation of the block number `70004358` on the TRON blockchain. Each node in the graph (based on a predefined mapping) one of these types differentiated by color: `block`, `transfer_event`, `transfer_contract_transaction` and `trigger_smart_contract_transaction`.
+- The `Reset View` option returns the user to the full view of the graph.
+- Clicking on any node isolates it:
+![enter image description here](https://i.postimg.cc/vTGXW6RK/obr-zok.png)
+-  By selecting the option `Show All Labels`, the atributes and relationships of the node are shown.
+- The user can then check the `Expand mode` option and expand each nodes related attribute by clicking on it:
+![enter image description here](https://i.postimg.cc/8cWJPZnQ/obr-zok.png)
