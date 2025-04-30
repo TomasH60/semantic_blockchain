@@ -4,6 +4,8 @@
 This project focuses on applying the Semantic Web principles on top of a blockhain for enhanced data transformation and exploration. 
 This implementation uses the TRON blockchain for data gathering, but in theory is blockchain agnostic, provided that the indexer is setup sufficiently for a different blockchain.
 
+This project was created as a part of my bachelor thesis at [FIIT STU](https://www.fiit.stuba.sk/) Bratislava.
+
 ## Features
 - Web GUI for accessing and interacting with the transformed data
 - SPARQL endpoint via Ontop
@@ -136,7 +138,7 @@ pip3 install -r requirements.txt
 
 after all the libraries have been downloaded, start the FastAPI backend:
 ```bash
-uvicorn  main:app  --host  0.0.0.0  --port  8000
+uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
 ### Frontend
