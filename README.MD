@@ -127,6 +127,7 @@ docker compose up -d
  ```bash
 npx squid-typeorm-migration apply
  ```
+
  ### Backend
  Inside the **backend** directory, setup and activate a python virtual enviroment:
  
@@ -135,6 +136,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip3 install -r requirements.txt
 ```
+(downloading the libraries is only necessary once per setup of the project)
 
 after all the libraries have been downloaded, start the FastAPI backend:
 ```bash
@@ -163,6 +165,7 @@ The user has the option of running the Ontop SPARQL endpoint either from the dat
 Then, there are the options for exporting the database to the selected fromat based on the mapping discussed previously.
 
 Next are the indexer controls for starting or stopping the indexer. The block range that the user wants to indexed is defined as environment variables in `semantic_blockchain/indexer/.env`.  Setting the `END_BLOCK_NUMBER` variable to `-1` will index data until the latest block and continue indexing the blocks in real time. Setting the variable `START_BLOCK_NUMBER` to `-1` will index blocks from the genesis block.
+Subsquid by default remembers the last indexed block number. To reset it execute `DROP SCHEMA squid_processor CASCADE;` inside the postgres container to reset the last indexed block number.
 
 After starting the indexer, statistics will get displayed:
 ![enter image description here](https://i.postimg.cc/LsX5PgPC/obr-zok.png)
