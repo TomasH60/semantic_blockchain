@@ -2,3 +2,4 @@ ontop-cli/
 dump/*
 !dump/.gitkeep
 reasoner
+.venv

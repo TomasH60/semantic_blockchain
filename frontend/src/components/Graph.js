@@ -28,11 +28,6 @@ const seededHash = (str) => {
     return hash;
 };
 
-
-const isAttribute = (label) =>
-    /^[0-9]+$/.test(label) || /^[0-9a-fA-F]{16,}$/.test(label) ||
-    /^0x[0-9a-fA-F]{8,}$/.test(label) || /\d{4}-\d{2}-\d{2}/.test(label);
-
 const Graph = () => {
     const containerRef = useRef(null);
     const networkRef = useRef(null);
@@ -234,17 +229,16 @@ const Graph = () => {
         const visibleNodes = originalData.nodes
             .filter((n) => visibleNodeIds.has(n.id))
             .map((node) => {
-                let shape = 'square';
-                let color = '#AAAAAA';
+                let shape = 'elipse';
+                let color = '#d9d9d9';
 
                 if (node.type === 'class') {
                     shape = 'dot';
                     color = getColorForClass(node.label);
-                } else if (node.type === 'attribute' || isAttribute(node.label)) {
+                } else if (node.type === 'attribute') {
                     shape = 'ellipse';
                     color = attributeColor;
                 } else if (node.type === 'instance') {
-                    
                     const classUri = instanceClassMap.get(node.id);
                     const classLabel = getLabel(classUri);
                     console.log(classLabel)

@@ -1243,7 +1243,10 @@ from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-
     <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#Transaction"/>
 
     <!-- First Third of Tron Transaction Classes -->
-
+    <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#TronTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#Transaction"/>
+    </owl:Class>
+    
     <owl:Class rdf:about="http://www.semanticblockchain.com/Blondie.owl#accountCreateContractTronTransaction">
         <rdfs:subClassOf rdf:resource="http://www.semanticblockchain.com/Blondie.owl#TronTransaction"/>
     </owl:Class>
