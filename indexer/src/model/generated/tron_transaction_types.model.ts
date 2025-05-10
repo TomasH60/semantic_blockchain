@@ -140,7 +140,8 @@ export class TriggerSmartContractTransaction extends BaseTransaction {
   @Column() ownerAddress!: string;
   @Column() contractAddress!: string;
   @Column() data!: string;
-  @Column("numeric", { nullable: true }) callValue?: string;
+  @Column() energyUsage!: string;
+  @Column() contractResult!: string;
 }
 
 @Entity()
@@ -275,12 +276,4 @@ export class UnDelegateResourceContractTransaction extends BaseTransaction {
 @Entity()
 export class CancelAllUnfreezeV2ContractTransaction extends BaseTransaction {
   @Column() ownerAddress!: string;
-}
-
-@Entity()
-export class GenericTransaction extends BaseTransaction {
-  @Column() type!: string;
-  @Column() contractAddress?: string;
-  @Column() fee?: string;
-  @Column() result?: string;
 }

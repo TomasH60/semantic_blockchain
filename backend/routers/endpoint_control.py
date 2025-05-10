@@ -11,6 +11,8 @@ ontop_process = None
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CONFIG_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "config"))
 DUMP_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "dump"))
+UPLOAD_ONTOLOGY_PATH = os.path.join(CONFIG_DIR, "uploaded_ontology.ttl")
+
 
 @router.post("/start-ontop-endpoint")
 def start_ontop():
@@ -31,8 +33,6 @@ def start_ontop():
             stderr=subprocess.PIPE,
             text=True
         )
-
-        # Wait briefly to check if it failed to start
         time.sleep(2)
         if ontop_process.poll() is not None:
             stdout, stderr = ontop_process.communicate()
@@ -50,10 +50,11 @@ def start_ontop():
 @router.get("/download-rdf")
 def download_rdf(format: str = Query(...)):
     format_map = {
-        "turtle": ("text/turtle", "materialized.ttl"),
-        "rdfxml": ("application/rdf+xml", "materialized.rdf"),
-        "jsonld": ("application/ld+json", "materialized.json")
-    }
+    "turtle": ("text/turtle", "materialized.ttl"),
+    "rdfxml": ("application/rdf+xml", "materialized.rdf"),
+    "jsonld": ("application/ld+json", "materialized.json"),
+    "n3": ("text/n3", "materialized.n3")
+}
 
     if format not in format_map:
         return {"error": "Unsupported RDF format"}
@@ -73,24 +74,57 @@ def export_rdf(format: str = Query("turtle")):
     format_map = {
         "turtle": ("text/turtle", "materialized.ttl"),
         "rdfxml": ("application/rdf+xml", "materialized.rdf"),
-        "jsonld": ("application/ld+json", "materialized.json")
+        "jsonld": ("application/ld+json", "materialized.json"),
+        "n3": ("text/n3", "materialized.n3")
     }
-
-    if format not in format_map:
-        return JSONResponse(status_code=400, content={"error": "Unsupported RDF format"})
 
     _, filename = format_map[format]
     output_path = os.path.join(DUMP_DIR, filename)
 
     try:
-        subprocess.run([
-            ONTOP_PATH, "materialize",
-            "-m", os.path.join(CONFIG_DIR, "mapping.obda"),
-            "-t", os.path.join(CONFIG_DIR, "ontology.owl"),
-            "-p", os.path.join(CONFIG_DIR, "ontop.properties"),
-            "-f", format,
-            "-o", output_path
-        ], check=True)
+        if format == "jsonld":
+    
+            temp_ttl_path = os.path.join(DUMP_DIR, "materialized_temp.ttl")
+            subprocess.run([
+                ONTOP_PATH, "materialize",
+                "-m", os.path.join(CONFIG_DIR, "mapping.obda"),
+                "-t", os.path.join(CONFIG_DIR, "ontology.owl"),
+                "-p", os.path.join(CONFIG_DIR, "ontop.properties"),
+                "-f", "turtle",
+                "-o", temp_ttl_path
+            ], check=True)
+
+            subprocess.run([
+                "riot", "--output=jsonld", temp_ttl_path
+            ], check=True, stdout=open(output_path, "w"))
+
+            os.remove(temp_ttl_path)
+        elif format == "n3":
+            temp_ttl_path = os.path.join(DUMP_DIR, "materialized_temp.ttl")
+            subprocess.run([
+                ONTOP_PATH, "materialize",
+                "-m", os.path.join(CONFIG_DIR, "mapping.obda"),
+                "-t", os.path.join(CONFIG_DIR, "ontology.owl"),
+                "-p", os.path.join(CONFIG_DIR, "ontop.properties"),
+                "-f", "turtle",
+                "-o", temp_ttl_path
+            ], check=True)
+
+            subprocess.run([
+                "riot", "--output=n3", temp_ttl_path
+            ], check=True, stdout=open(output_path, "w"))
+
+            os.remove(temp_ttl_path)
+
+        else:
+            subprocess.run([
+                ONTOP_PATH, "materialize",
+                "-m", os.path.join(CONFIG_DIR, "mapping.obda"),
+                "-t", os.path.join(CONFIG_DIR, "ontology.owl"),
+                "-p", os.path.join(CONFIG_DIR, "ontop.properties"),
+                "-f", format,
+                "-o", output_path
+            ], check=True)
 
         return {"status": "ok", "download_url": f"/download-rdf?format={format}"}
 
@@ -98,7 +132,6 @@ def export_rdf(format: str = Query("turtle")):
         return {"error": f"Materialization failed: {e}"}
     except Exception as ex:
         return {"error": str(ex)}
-UPLOAD_ONTOLOGY_PATH = os.path.join(CONFIG_DIR, "uploaded_ontology.ttl")
 
 @router.post("/start-ontop-endpoint-file")
 async def start_ontop_from_file(file: UploadFile = File(...)):

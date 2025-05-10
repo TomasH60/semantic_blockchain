@@ -14,5 +14,8 @@ SPARQL_ENDPOINT = os.getenv("SPARQL_ENDPOINT")
 
 # Reasoner-related configuration
 BASE_DIR = os.getenv("BASE_DIR", "/app")
-REASONER_SCRIPT = os.path.join(BASE_DIR, os.getenv("REASONER_SCRIPT", "reasoner.py"))
-INFERRED_DUMP = os.path.join(BASE_DIR, os.getenv("INFERRED_DUMP", "inferred_dump.rdf"))
+
+N3_REASONER_PATH = "/opt/eye/bin/eye"  
+N3_CLASSES_PATH = os.path.join(BASE_DIR, "classes", "rules.n3")
+N3_INPUT_PATH = os.path.join(BASE_DIR, "dump", "rdf_input.n3")
+N3_OUTPUT_PATH = os.path.join(BASE_DIR, "dump", "rdf_output_inferred.n3")

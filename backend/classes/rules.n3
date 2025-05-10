@@ -1,0 +1,11 @@
+@prefix : <http://www.semanticblockchain.com/Blondie.owl#> .
+@prefix res: <http://www.semanticblockchain.com/resource/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+{
+  ?tx a :transferContractTronTransaction .
+}
+=>
+{
+  ?tx :type :approvalTronEvent .
+} .

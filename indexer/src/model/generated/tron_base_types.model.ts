@@ -3,8 +3,8 @@ import { PrimaryColumn, Column, Entity } from "@subsquid/typeorm-store";
 export abstract class BaseTransaction {
   @PrimaryColumn() id!: string;
   @Column() blockHash!: string;
-  @Column() timestamp!: Date;
-
+  @Column('timestamptz')timestamp!: Date;
+  @Column() netFee!: string;
   constructor(props?: Partial<any>) {
     Object.assign(this, props);
   }
@@ -28,7 +28,7 @@ export class Block {
   @PrimaryColumn() id!: string;
   @Column() number!: number;
   @Column() parentHash!: string;
-  @Column() timestamp!: Date;
+  @Column('timestamptz')timestamp!: Date;
 }
 
 @Entity()
@@ -38,8 +38,10 @@ export class InternalTransaction {
   }
   @PrimaryColumn() id!: string;
   @Column() callerAddress!: string;
-  @Column() transactionHash!: string;
+  
   @Column() transferToAddress!: string;
-  @Column("numeric") amount!: string;
+  @Column() transactionHash!: string;
+  @Column() callValue!: string;
+  @Column() tokenId!: string;
   @Column() rejected?: boolean;
 }

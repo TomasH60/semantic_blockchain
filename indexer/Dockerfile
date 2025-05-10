@@ -8,4 +8,5 @@ RUN npm install
 COPY . .
 RUN npx tsc
 
-CMD ["sh", "-c", "npx squid-typeorm-migration apply && node -r dotenv/config lib/main.js"]
+CMD ["sh", "-c", "npx squid-typeorm-migration apply && node process_manager.js"]
+

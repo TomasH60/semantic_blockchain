@@ -1,26 +1,33 @@
-# Use an official Python image
-FROM python:3.10
+# Use an official slim Python image (based on Alpine Linux)
+FROM python:3.10-alpine
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy the FastAPI backend code
+# Copy all backend files
 COPY . .
 
-# Install dependencies
+# Install system dependencies
+RUN apk add --no-cache wget unzip openjdk11 bash
+
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Ensure Ontop CLI (version 5.3.0) is installed
+# Install Ontop CLI
 RUN wget https://github.com/ontop/ontop/releases/download/ontop-5.3.0/ontop-cli-5.3.0.zip \
-    && unzip ontop-cli-5.3.0.zip -d ontop-cli \
+    && unzip -q -o ontop-cli-5.3.0.zip -d ontop-cli \
     && rm ontop-cli-5.3.0.zip \
-    && chmod +x ontop-cli/ontop.bat \
+    && chmod +x ontop-cli/ontop \
     && wget https://jdbc.postgresql.org/download/postgresql-42.7.5.jar \
-    && mv postgresql-42.7.5.jar ontop-cli/jdbc/ \
-    && apt update \
-    && apt install bash-completion \
-    && apt install -y default-jdk
+    && mkdir -p ontop-cli/jdbc \
+    && mv postgresql-42.7.5.jar ontop-cli/jdbc/
 
+# Install Apache Jena (riot)
+RUN wget https://archive.apache.org/dist/jena/binaries/apache-jena-5.4.0.tar.gz \
+    && tar -xzf apache-jena-5.4.0.tar.gz \
+    && mv apache-jena-5.4.0 jena \
+    && rm apache-jena-5.4.0.tar.gz \
+    && chmod +x jena/bin/*
 
-CMD ["bash", "-c", "ontop-cli/ontop endpoint --ontology=ontology.owl --mapping=mapping.obda --properties=ontop.properties & uvicorn main:app --host 0.0.0.0 --port 8000"]
-
+# Expose API
+CMD ["bash", "-c", "ENV_PATH=.env.docker uvicorn main:app --host 0.0.0.0 --port 8000"]

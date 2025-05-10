@@ -866,6 +866,182 @@ from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-
         <rdfs:comment>Address removed from the blacklist.</rdfs:comment>
     </owl:DatatypeProperty>
 
+    <!-- Datatype properties for missing fields based on database mamountTransferContractTronTransactionigration -->
+
+    <!-- Transfer Contract Transaction: amount -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#amountTransferContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#transferContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- Transfer Asset Contract Transaction: amount -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#amountTransferAssetContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#transferAssetContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- Trigger Smart Contract Transaction: call_value -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#callValueTriggerSmartContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#triggerSmartContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- Generic Tron Transaction: fee -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#feeGenericTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#genericTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Generic Tron Transaction: result -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#resultGenericTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#genericTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Exchange Contract Transactions: quant -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#quantExchangeContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#exchangeCreateContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- Exchange Transaction Contract Transaction: expected -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#expectedExchangeTransactionContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#exchangeTransactionContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- Delegate Resource Contract Transaction: balance -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#balanceDelegateResourceContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#delegateResourceContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- Delegate Resource Contract Transaction: resource -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#resourceDelegateResourceContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#delegateResourceContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Delegate Resource Contract Transaction: lock -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#lockDelegateResourceContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#delegateResourceContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+
+    <!-- Shielded Transfer Contract Transaction: shielded_transaction_data -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#shieldedTransactionDataShieldedTransferContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#shieldedTransferContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Approval Event: owner -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#ownerApprovalTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#approvalTronEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Approval Event: spender -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#spenderApprovalTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#approvalTronEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Approval Event: value -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#valueApprovalTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#approvalTronEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- Transfer Event: from -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#fromTransferTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#transferTronEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Transfer Event: to -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#toTransferTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#transferTronEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Transfer Event: value -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#valueTransferTronEvent">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#transferTronEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+    <!-- Additional missing TRON Datatype Properties -->
+
+    <!-- TransferAssetContract Transaction: assetName -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#assetNameTransferAssetContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#transferAssetContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- TriggerSmartContract Transaction: contractAddress -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#contractAddressTriggerSmartContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#triggerSmartContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- TriggerSmartContract Transaction: data -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#dataTriggerSmartContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#triggerSmartContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- TransferContract Transaction: ownerAddress -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#ownerAddressTransferContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#transferContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- TransferContract Transaction: toAddress -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#toAddressTransferContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#transferContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- TransferAssetContract Transaction: ownerAddress -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#ownerAddressTransferAssetContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#transferAssetContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- TransferAssetContract Transaction: toAddress -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#toAddressTransferAssetContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#transferAssetContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- TriggerSmartContract Transaction: ownerAddress -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#ownerAddressTriggerSmartContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#triggerSmartContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- Transfer Event (event fields already added previously) - no new missing fields -->
+
+    <!-- Approval Event (event fields already added previously) - no new missing fields -->
+
+    <!-- ShieldedTransferContract Transaction: transparentFromAddress -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#transparentFromAddressShieldedTransferContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#shieldedTransferContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- ShieldedTransferContract Transaction: transparentToAddress -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#transparentToAddressShieldedTransferContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#shieldedTransferContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+
+    <!-- ShieldedTransferContract Transaction: amount -->
+    <owl:DatatypeProperty rdf:about="http://www.semanticblockchain.com/Blondie.owl#amountShieldedTransferContractTronTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticblockchain.com/Blondie.owl#shieldedTransferContractTronTransaction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
