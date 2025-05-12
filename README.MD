@@ -271,4 +271,4 @@ By selecting the option `Show All Labels`, the atributes and relationships of th
 
 The user can then check the `Expand mode` option and expand each nodes related attribute by clicking on it:
 
-![enter image description here](https://i.postimg.cc/8cWJPZnQ/obr-zok.png)
+![enter image description here](<https://media-hosting.imagekit.io/f383e9d5a24b4e69/screenshot_1747051748337.png?Expires=1841659749&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ZpnyTUO7YvB5mZIlkr8Duo5HgeBaVmSQPJtu6hol3zEb9ggDxm7eYGEMM5BT8VFQlowQTqRb14KCzRRika5TN-Hz1tejueVlLkww0le2hefV3I1~T8VJsvy2VyvypapRZGAmaRDyclzE5KwIGk9QttbGQImafC77B1RtuCca~~HbCymd2d633RoL18L1Qw20jd2b3t2lLTgNyMRc5AqY4cZzELxdyleYvJah0gus1iKNj989-7SnoKM36auOg1cnFPFDvTEk~Zb6XV080kA1ws6fL2l3HHRqQW3Eswxe8ImE6JBKzvzXLKIHrZe436Yp7UjDRDcMgFeG47nYf9GFxw__>)
