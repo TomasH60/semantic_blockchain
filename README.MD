@@ -215,7 +215,8 @@ Here listed are examples of the projects functionalities:
 ### Dashboard
 This page displays the indexer statistics, data composition and controls for the Ontop endpoint, Subsquid indexer and exporting options:
 
-![enter image description here](https://i.postimg.cc/qRdHpqf7/Screenshot-2025-04-30-at-23-39-50.png)
+![68747470733a2f2f692e706f7374696d672e63632f71526448707166372f53637265656e73686f742d323032352d30342d33302d61742d32332d33392d35302e706e67.png](<https://media-hosting.imagekit.io/faf02dc45c8e46c7/68747470733a2f2f692e706f7374696d672e63632f71526448707166372f53637265656e73686f742d323032352d30342d33302d61742d32332d33392d35302e706e67.png?Expires=1841660569&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=KsOmYqdcO-Vm~EytTCPkOAXFs4pCA1bT6xqNyg5PHmWVir-wRLm4O8dIgVpM2iht-uVnKtPdv9D1pjBFOZGHWRXo17G~eoa1zBrXgwVaNS~cgVXQVAcXjB8T0lvBhPfTjfnHO1zD7VjPL1OIK~HXtzAZmTY0K-SQ3pRo~O-voSRtctGTeWJ0W8IW2~~K6~4l2xmRw3KmEp6Nb5eIg5CwMFxCPQIlJlV9FGDLdmycCkHRCMwcFNxrELevPvsTaFA0C-Ya0XUmB0vBA-hOUy58XEl9kqPAd7n9NN9JnDWdSa4DQG3qpt59YFNlPGx7UUGnStkMzorOSHwgR-zGC7tNTA__>)
+
 The user has the option of running the Ontop SPARQL endpoint either from the database based on a .obda mapping, located in `semantic_blockchain/backend/config/mapping.obda` or from a .rdf dump, which can be upladed to the web.
 
 Then, there are the options for exporting the database to the selected fromat based on the mapping discussed previously.
@@ -225,39 +226,42 @@ Subsquid by default remembers the last indexed block number. To reset it execute
 
 After starting the indexer, statistics will get displayed:
 
-![enter image description here](https://i.postimg.cc/LsX5PgPC/obr-zok.png)
+![68747470733a2f2f692e706f7374696d672e63632f4c735835506750432f6f62722d7a6f6b2e706e67.png](<https://media-hosting.imagekit.io/32c49a40854e4314/68747470733a2f2f692e706f7374696d672e63632f4c735835506750432f6f62722d7a6f6b2e706e67.png?Expires=1841660569&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=q-PTHZbr2Px9pGgZ3ZclKqhg4Hz0bZ1QXCFHDdwKmJUqPOczDIw~I88jx3AofCbFAsY4VZlve-PcRTvOi-jKSYFbXI~3g5o~zkk78n9Se7a8fdBiL81WI03DaK6uesEZdUo6ZxSyPV3k3BSaCxLJCBUuyd~7Dj1dbi1XKVSYcAGqzyLFvNc0SVz4TefNb-J6rVBsTODkM4OON44aCiKguyNfz6dRJebtMv0yjeJATd~Zl8iF0iYh1RWbdpTSpJCyok83FRSze5KDUeq6eYiPQ2btptRsda3w6Q2WvNyW3bvuZ23zk1sKp8F69HrwSGoMPM51u3CMblpTFPQFODGMRw__>)
 
 the displayed  statistics represent the current data stored in the database, the block range indexed, the numbers of blocks, internal transactions, transactions and events indexed and the rates at which each item gets indexed. Under the statistics are displayed numbers of each transaction type and event type indexed.
 
 Bellow is a live indexer performance graph:
 
-![enter image description here](https://i.postimg.cc/TYH59XjY/obr-zok.png)
+![68747470733a2f2f692e706f7374696d672e63632f5459483539586a592f6f62722d7a6f6b2e706e67.png](<https://media-hosting.imagekit.io/003234126ceb408c/68747470733a2f2f692e706f7374696d672e63632f5459483539586a592f6f62722d7a6f6b2e706e67.png?Expires=1841660569&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BkzCA42QyuoSPJk8~C0hrhL1qwhGhcyJVO04oRhXGVuGOBn8Cu~f8TsUgqZ3jBBi-ghA60J0R-uHN6ejjaUTwBGku2Ls2X2aPX1bccDN-Vnxjy3JqFQv7Y5N0cH0W8C9-jIhCp25sIGv-0vMP8Crc6FpE-cB3nHWsDgz6FBQgJP7rXpwKdQLRZ8QAsD1xXor6S9XTidTOfeYxYIByC7r7f0mC25BP6sMfY5fGQjxdFB5e0xZu6ZF3555ZuekYaUJIMduFn4X6vYEp5FNgQxeQbOoxvxgsKxOjKVzdJ2Wzy-0lT0B3lpGE5SCOqCcz5nbydGxnTFVJtjro~tQA18T9Q__>)
 
 Under the graph are displayed pie charts of transaction and event composition indexed by transaction and event types:
 
-![enter image description here](https://i.postimg.cc/qRTdHzrB/obr-zok.png)
+![68747470733a2f2f692e706f7374696d672e63632f71525464487a72422f6f62722d7a6f6b2e706e67.png](<https://media-hosting.imagekit.io/779aaa7811a34482/68747470733a2f2f692e706f7374696d672e63632f71525464487a72422f6f62722d7a6f6b2e706e67.png?Expires=1841660569&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0LgTmoSBQC1cHzlZGoltCLKCKWyIjTa8rSH2J~VFjHD1NelpnWLr9lz1EQ38b-Bb4lz4PIeGhm4kXmT7pe7WWn2Mo0u3omac2YmnsmUfYZHm43sQstBB8DlOon-XcPZKXjiYngY4nCeHuzAIOH2LjyrfHsyZh55GtdSa9zaBky3pGqRFz~aY9Z8ZHlbtqev4TqyC0m9VDw9c0domltQ3KXFee6b8HkwiWKz6JSTYdgFfeb0y3no0J-VE7fczUwKC3Qtk9L9Ur3-kDGyzs0noSkw2QB1tQiMANHo1laQV69hlcxX8oyIEebRAh0T2u97kSh4CIzDOmbt756uJYjfcKQ__>)
+
 ### SPARQL Query
 
 This page enables the user to write and execute SPARQL queries against the Ontop endpoint:
 
-![enter image description here](https://i.postimg.cc/X7pN8B7t/obr-zok.png)
+![68747470733a2f2f692e706f7374696d672e63632f5837704e384237742f6f62722d7a6f6b2e706e67.png](<https://media-hosting.imagekit.io/f6d7731367b04f65/68747470733a2f2f692e706f7374696d672e63632f5837704e384237742f6f62722d7a6f6b2e706e67.png?Expires=1841660569&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ITMwxbrd7helrKnm-i-sitQ9En-qkXH5JeW2pQ-XhM8XKe6Hkc7GlwkedYyxp0U2Kdao~wX7Y0z1LzJWLGawb57D48apI7XhsFKTZnQcy073tCq51QOwvBmo4O4h5jdgOL6-Nxpq-wWaTYXAthopQ4A4~bVYbssr0JeK0OihLc06bJuqToQjydYlqZX7k5L7Ojivk-ljNPwqAd6AyE0MEDzLBBvZ4IGw1uUz~CyF6-GMSf20LyCZafhKikk4XVFLMkpWnMxotFyiPqyu~XwiCv7We4vEnFN7811bqJRjz94KGSfDa17iY6ujwRSLVtP~21hIviN0SKQEaY58U1a7MA__>)
+
 ### Reasoner
 This page enables the user to write custom rules, and run the EYE reasoner on the uploaded data and the ontology located at `semantic_blockchain/backend/config/ontology.owl`. The output gets automatically downloaded to the browser and reasoner stats get displayed.
 
-![enter image description here](https://i.postimg.cc/5NMpTQG7/image.png)
+![68747470733a2f2f692e706f7374696d672e63632f354e4d70545147372f696d6167652e706e67.png](<https://media-hosting.imagekit.io/bd64e31997a24854/68747470733a2f2f692e706f7374696d672e63632f354e4d70545147372f696d6167652e706e67.png?Expires=1841660569&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zRIQn2U7MgFWXVkJo5~MIEdI1nkRWngZ2G5XfePxtHqqQVSV-FkEpzygTn8sW2RFcb-Z~Y8PlSpxail-5fNeibJRhzJHo5dO7NUSZo~zp20-WHdGlJH22rsC5rQqUPBVfheEbJXoLtGJMneXRiO9u0I9HY1PaNr9qOtE8HLPSV6kvmqBV04gYCA0dmbEGtabBSuYU7jFu71RYqG03LAtIHsX0qLPq9hwYGAcUz467PP~WjlaTZXTR8-Wki0lBq6UWOexMVmjjxykG47lECCTjFQ12il8WyNtRhrFJ-HYGznFJHIgHmWO57~0VVWBz7gBqk14LZFfeKZ3seLcBux2vA__>)
 
 after running the reasoner:
 
-![enter image description here](https://i.postimg.cc/YCCPDmLc/image.png)
+![68747470733a2f2f692e706f7374696d672e63632f59434350446d4c632f696d6167652e706e67.png](<https://media-hosting.imagekit.io/ef3d16a5b17d48ed/68747470733a2f2f692e706f7374696d672e63632f59434350446d4c632f696d6167652e706e67.png?Expires=1841660569&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=UcnkikxNzO~TaOjluG8RXReVYBa-77EG5r1tMxemhlOl6434WzBlByxNbUL~TkkoXbUbyqLQ37m8ATK~c~LEGOXAfHj7zefkU6dEwAofEQ3Hh8Q1xDdvqZobIwzeb8KvotOfp1TBY~X8YHYOV09-ziaTNiR5g8spyiiSwtwVPnFJsqfI7bATW~~YPp~1y~YU6G1Vww7bmfT4Y1n5d~b4kMzSy7XvQr2D2nQBna3e3HARjoOiZICpw1DS14wNg4XHov6CY5qC1P9Yumvg4pVubmqHx1JTKQ0cxZEuDHJPD6i-1-lkSLHvSvkV~ejlYsglZQXKzAdyNKivjNEBETCzmQ__>)
+
 ### Graph
 
 This page enables the user to upload a ontology in the database dump in the `.owl` format and the data dump in `.n3` format and explore the data using different modes.
 
-![enter image description here](https://i.postimg.cc/nhKvmdhp/image.png)
+![68747470733a2f2f692e706f7374696d672e63632f6e684b766d6468702f696d6167652e706e67.png](<https://media-hosting.imagekit.io/597eda7d0d59469c/68747470733a2f2f692e706f7374696d672e63632f6e684b766d6468702f696d6167652e706e67.png?Expires=1841660569&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=2MejmTgWSyt0VcqLtE6VH8UBFZk0HMeu9xeht0PhkEcBfIH9rsHFWkVSdtiygPafSG80YwNocsWXpDWjisvYU8oH0uMYNnFK0~chpqG3iJ8duik-OOzWJ1O4~7Xj4WAMHIUNuvc-7-i9oTvDjbB1VTcSHboNsW8iT5-k~H1r4aPR-~nsBYjb4UFEf6pQM7Ic6GaWuhi7OjcGjwUXmFsk1KpHqwE9NTaLR3SIXviikrUnLqyZbcPUkDwdzHdq6XOd1Ea9mQmEzif2XhArlTfZPBaij7vtpE2AOP1HfleGRFeRlq-4jIYuaFlH3UM~uJG3QZ9Jg25m~rQlYDq7-mXJeA__>)
 
 After uploading the ontology and the n3 data dump:
 
-![enter image description here](https://i.postimg.cc/Prd44pPm/image.png)
+![68747470733a2f2f692e706f7374696d672e63632f507264343470506d2f696d6167652e706e67.png](<https://media-hosting.imagekit.io/7dd121950ceb49b3/68747470733a2f2f692e706f7374696d672e63632f507264343470506d2f696d6167652e706e67.png?Expires=1841660569&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=c0zwzeYoasyL7yozMd2XDlIF-jq90GkbZG01RYLBtZGa3aBuuHy3p3FfUjdT34DDwerEpUwtpqVZQiZHOV4f-dTmuqNtf5Rm~0QRT4ytgAv7~sQf9n86PQcTft2cpXN3FsMi9bntr-MfZTxANUZ~u0Sm~i8b2b7BssQdor65DKsFRoKadFYy6-5mjYNxyZch0ia2rqEd84y6ckM-Yc5CrkQ5Uw-yyYMSIIRSJ2WpzpHAOpub53Tz7ik3mFVjJ8oN0jOZTVvTuWlXxD8Gh7Hpe~sNAW9SYgAN3iLEhZjld7tAR8p5mm2bNm0-dDok2JISdUhBJ4frONhgpHA7eFTG5g__>)
 
 The current image is a visual representation of the block number `71964500` on the TRON blockchain. The list at the top lists all of the classes in the current graph along with their color and count on the graph.
 
@@ -265,7 +269,7 @@ The `Reset View` option returns the user to the full view of the graph.
 
 Clicking on any node isolates it:
 
-![enter image description here](https://i.postimg.cc/gjtHj4mm/image.png)
+![68747470733a2f2f692e706f7374696d672e63632f676a74486a346d6d2f696d6167652e706e67.png](<https://media-hosting.imagekit.io/05183298e8de41bf/68747470733a2f2f692e706f7374696d672e63632f676a74486a346d6d2f696d6167652e706e67.png?Expires=1841660569&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=nizCw4m2pOGZUHC1NFx0gG1~WCb-qxUOlJvpCBCSmJJyUn0dhrbTrYBo3b-HdiziVvhVjwKmRxlfoNgxBOweN3nGrsdfth186BLCsHDY88ZsLBuSvro-pGeToM-63zChLHkx50MbPo33dwfEUA2T40l9zcDDSu3sUIinOUpEATwIJ0zjMiocdsHx1JMX1yrkpcQT2TjSFQAQQnMoIERJicCOIx4l3D2Gt9KakA~~O766fl62vM274px5tAbvjCvEmfT1fgo0buJliq7FLOUuDD06cBlRZHr3INCdjdFN3utS4Favlnrl8Yn5umU7~4yIrqvLeejhblhFFPIcJhNxIQ__>)
 
 By selecting the option `Show All Labels`, the atributes and relationships of the node are shown.
 
